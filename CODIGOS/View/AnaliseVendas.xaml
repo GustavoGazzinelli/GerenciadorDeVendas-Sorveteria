@@ -1,0 +1,38 @@
+﻿<Window x:Class="Sorveteria.View.AnaliseVendas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sorveteria.View"
+        mc:Ignorable="d"
+        Title="AnaliseVendas" Height="350" Width="700"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFF8CC0E"/>
+                <GradientStop Color="#FFFFAB00" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="Filtrar Por?" HorizontalAlignment="Left" Margin="25,27,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+        <ComboBox x:Name="boxEscolha" HorizontalAlignment="Left" Margin="132,29,0,0" VerticalAlignment="Top" Width="120" Height="30" VerticalContentAlignment="Center" FontSize="16" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Tudo"/>
+            <ComboBoxItem Content="Sorvete"/>
+            <ComboBoxItem Content="Picolé"/>
+        </ComboBox>
+        <Button x:Name="botCadastro_Copiar" Content="Voltar" HorizontalAlignment="Left" Margin="551,25,0,0" VerticalAlignment="Top" Height="36" Width="99" FontSize="18" VerticalContentAlignment="Center" Foreground="White" BorderBrush="{x:Null}" Click="botCadastro_Copiar_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF2020B"/>
+                    <GradientStop Color="#FFF40508" Offset="1"/>
+                    <GradientStop Color="#FFFF1A1E" Offset="0.483"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Total de Vendas" HorizontalAlignment="Left" Margin="119,121,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Height="37" Width="158"/>
+        <Label Content="Total de Faturamento" HorizontalAlignment="Left" Margin="343,121,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="totVenda" Content="0" HorizontalAlignment="Left" Margin="122,163,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="28" FontWeight="Bold" HorizontalContentAlignment="Center" Width="148"/>
+        <Label x:Name="totFat" Content="R$0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Red" FontSize="28" FontWeight="Bold" HorizontalContentAlignment="Center" Width="212" Margin="342,163,0,0"/>
+
+    </Grid>
+</Window>
